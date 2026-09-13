@@ -1,0 +1,84 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  body {
+    background-color: #07080a;
+    color: #f1f5f9;
+    font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* Glassmorphism & Custom styling */
+.glass-panel {
+  background: rgba(20, 22, 31, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(28, 31, 45, 0.85);
+  border-color: rgba(255, 107, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(255, 107, 0, 0.15);
+}
+
+.glass-nav {
+  background: rgba(13, 14, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.neon-border-orange {
+  border-color: #ff6b00;
+  box-shadow: 0 0 15px rgba(255, 107, 0, 0.35);
+}
+
+.neon-glow-btn {
+  background: linear-gradient(135deg, #ff6b00 0%, #ff8533 100%);
+  box-shadow: 0 4px 20px rgba(255, 107, 0, 0.4);
+  transition: all 0.25s ease;
+}
+
+.neon-glow-btn:hover {
+  background: linear-gradient(135deg, #ff7d1a 0%, #ff944d 100%);
+  box-shadow: 0 6px 28px rgba(255, 107, 0, 0.6);
+  transform: translateY(-1px);
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0e12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2c3144;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6b00;
+}
+
+/* Subtle background radial grid */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(255, 107, 0, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Glowing text */
+.text-glow-orange {
+  text-shadow: 0 0 20px rgba(255, 107, 0, 0.5);
+}
